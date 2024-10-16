@@ -1,0 +1,44 @@
+type Client @model {
+  id: ID!
+  name: String!
+  email: AWSEmail!
+  phone: String
+  cellarLocation: String
+  wines: [Wine] @hasMany
+  spirits: [Spirit] @hasMany
+  cellarConditions: [CellarCondition] @hasMany
+}
+
+type Wine @model {
+  id: ID!
+  name: String!
+  producer: String!
+  vintage: Int!
+  region: String!
+  variety: String
+  quantity: Int!
+  storageLocation: String
+  clientID: ID! @index(name: "byClient")
+  client: Client @belongsTo(fields: ["clientID"])
+}
+
+type Spirit @model {
+  id: ID!
+  name: String!
+  type: String!
+  producer: String!
+  vintage: Int!
+  quantity: Int!
+  storageLocation: String
+  clientID: ID! @index(name: "byClient")
+  client: Client @belongsTo(fields: ["clientID"])
+}
+
+type CellarCondition @model {
+  id: ID!
+  date: AWSDateTime!
+  temperature: Float!
+  humidity: Float!
+  clientID: ID! @index(name: "byClient")
+  client: Client @belongsTo(fields: ["clientID"])
+}

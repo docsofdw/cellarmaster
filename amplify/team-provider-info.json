@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cellarmaster-dev-b5a0a-authRole",
+      "UnauthRoleArn": "arn:aws:iam::992382608346:role/amplify-cellarmaster-dev-b5a0a-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::992382608346:role/amplify-cellarmaster-dev-b5a0a-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cellarmaster-dev-b5a0a-deployment",
+      "UnauthRoleName": "amplify-cellarmaster-dev-b5a0a-unauthRole",
+      "StackName": "amplify-cellarmaster-dev-b5a0a",
+      "StackId": "arn:aws:cloudformation:us-east-1:992382608346:stack/amplify-cellarmaster-dev-b5a0a/85a65e70-8b42-11ef-a85c-0e0946da248b",
+      "AmplifyAppId": "d36y5a819cete2"
+    },
+    "categories": {
+      "api": {
+        "cellarmaster": {}
+      }
+    }
+  }
+}
